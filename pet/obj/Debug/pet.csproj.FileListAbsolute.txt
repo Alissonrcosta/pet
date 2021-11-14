@@ -1,0 +1,12 @@
+C:\Programas\pet\pet\obj\Debug\pet.csproj.AssemblyReference.cache
+C:\Programas\pet\pet\obj\Debug\pet.Properties.Resources.resources
+C:\Programas\pet\pet\obj\Debug\pet.csproj.GenerateResource.cache
+C:\Programas\pet\pet\obj\Debug\pet.csproj.CoreCompileInputs.cache
+C:\Programas\pet\pet\bin\Debug\DbPetshop1.mdf
+C:\Programas\pet\pet\bin\Debug\DbPetshop1_log.ldf
+C:\Programas\pet\pet\bin\Debug\pet.exe.config
+C:\Programas\pet\pet\bin\Debug\pet.exe
+C:\Programas\pet\pet\bin\Debug\pet.pdb
+C:\Programas\pet\pet\obj\Debug\pet.FormCliente.resources
+C:\Programas\pet\pet\obj\Debug\pet.exe
+C:\Programas\pet\pet\obj\Debug\pet.pdb
