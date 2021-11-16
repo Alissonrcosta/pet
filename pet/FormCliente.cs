@@ -145,6 +145,34 @@ namespace pet
         {
             CarregaDgv();
         }
+
+        private void btnApagar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("ApagarCliente", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = Convert.ToInt32(txtId.Text.Trim());
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Cliente apagado com sucesso!", "Apagar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+                CarregaDgv();
+                txtId.Text = "";
+                txtNome.Text = "";
+                txtEndereco.Text = "";
+                txtCidade.Text = "";
+                txtCelular.Text = "";
+                txtEmail.Text = "";
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
     }
 }
 

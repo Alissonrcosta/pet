@@ -10,3 +10,7 @@ C:\Programas\pet\pet\bin\Debug\pet.pdb
 C:\Programas\pet\pet\obj\Debug\pet.FormCliente.resources
 C:\Programas\pet\pet\obj\Debug\pet.exe
 C:\Programas\pet\pet\obj\Debug\pet.pdb
+C:\Programas\pet\pet\obj\Debug\pet.FormFuncionario.resources
+C:\Programas\pet\pet\obj\Debug\pet.FormPrincipal.resources
+C:\Programas\pet\pet\obj\Debug\pet.FormMenu.resources
+C:\Programas\pet\pet\obj\Debug\pet.FormLogin.resources
