@@ -16,3 +16,4 @@ C:\Programas\pet\pet\obj\Debug\pet.FormLogin.resources
 C:\Programas\pet\pet\obj\Debug\pet.csprojAssemblyReference.cache
 C:\Programas\pet\pet\obj\Debug\pet.FormSplashScreen.resources
 C:\Programas\pet\pet\obj\Debug\pet.FormAnimais.resources
+C:\Programas\pet\pet\obj\Debug\pet.FormServico.resources

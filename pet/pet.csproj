@@ -98,6 +98,12 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServico.Designer.cs">
+      <DependentUpon>FormServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServico.resx">
+      <DependentUpon>FormServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSplashScreen.resx">
       <DependentUpon>FormSplashScreen.cs</DependentUpon>

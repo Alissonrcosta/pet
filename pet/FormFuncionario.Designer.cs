@@ -98,6 +98,7 @@ namespace pet
             this.btnApagar.TabIndex = 70;
             this.btnApagar.Text = "Apagar";
             this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // btnAtualizar
             // 
@@ -108,6 +109,7 @@ namespace pet
             this.btnAtualizar.TabIndex = 69;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnInserir
             // 
@@ -215,6 +217,7 @@ namespace pet
             this.btnLocalizar.TabIndex = 57;
             this.btnLocalizar.Text = "Localizar";
             this.btnLocalizar.UseVisualStyleBackColor = true;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // cbxGenero
             // 
@@ -263,6 +266,8 @@ namespace pet
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnLocalizar);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormFuncionario";
             this.Text = "FormFuncionario";
             this.Load += new System.EventHandler(this.FormFuncionario_Load);
