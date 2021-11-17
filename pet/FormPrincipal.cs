@@ -56,5 +56,12 @@ namespace pet
             cli.MdiParent = this;
             cli.Show();
         }
+
+        private void animaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var ani = new FormAnimais();
+            ani.MdiParent = this;
+            ani.Show();
+        }
     }
 }

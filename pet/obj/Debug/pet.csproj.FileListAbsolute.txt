@@ -1,4 +1,3 @@
-C:\Programas\pet\pet\obj\Debug\pet.csproj.AssemblyReference.cache
 C:\Programas\pet\pet\obj\Debug\pet.Properties.Resources.resources
 C:\Programas\pet\pet\obj\Debug\pet.csproj.GenerateResource.cache
 C:\Programas\pet\pet\obj\Debug\pet.csproj.CoreCompileInputs.cache
@@ -14,3 +13,6 @@ C:\Programas\pet\pet\obj\Debug\pet.FormFuncionario.resources
 C:\Programas\pet\pet\obj\Debug\pet.FormPrincipal.resources
 C:\Programas\pet\pet\obj\Debug\pet.FormMenu.resources
 C:\Programas\pet\pet\obj\Debug\pet.FormLogin.resources
+C:\Programas\pet\pet\obj\Debug\pet.csprojAssemblyReference.cache
+C:\Programas\pet\pet\obj\Debug\pet.FormSplashScreen.resources
+C:\Programas\pet\pet\obj\Debug\pet.FormAnimais.resources

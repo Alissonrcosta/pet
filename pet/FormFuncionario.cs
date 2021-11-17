@@ -6,13 +6,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace pet
 {
+    
     public partial class FormFuncionario : Form
     {
+        //private Cripto b;
         SqlConnection con = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename=C:\\Programas\\pet\\pet\\DbPetshop1.mdf;Integrated Security = True");
         public FormFuncionario()
         {
@@ -42,11 +45,12 @@ namespace pet
             try
             {
                 con.Open();
+                //string senha = b.Base64Encode(txtSenha.Text);
                 SqlCommand cmd = new SqlCommand("InserirFuncionario", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@nome", SqlDbType.NChar).Value = txtNome.Text;
                 cmd.Parameters.AddWithValue("@login", SqlDbType.NChar).Value = txtLogin.Text;
-                cmd.Parameters.AddWithValue("@senha", SqlDbType.NChar).Value = txtSenha.Text.Trim();
+                cmd.Parameters.AddWithValue("@senha", SqlDbType.NChar).Value = txtSenha.Text;
                 cmd.Parameters.AddWithValue("@celular", SqlDbType.NChar).Value = txtCelular.Text.Trim();
                 cmd.Parameters.AddWithValue("@data_admissao", SqlDbType.Date).Value = Convert.ToDateTime(dtDataAdmissao.Value);
                 cmd.Parameters.AddWithValue("@genero", SqlDbType.NChar).Value = (cbxGenero.Text.Trim());

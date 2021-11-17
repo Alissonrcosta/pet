@@ -63,6 +63,16 @@ namespace pet.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap animais {
+            get {
+                object obj = ResourceManager.GetObject("animais", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cliente {
             get {
                 object obj = ResourceManager.GetObject("cliente", resourceCulture);
@@ -86,6 +96,16 @@ namespace pet.Properties {
         internal static System.Drawing.Bitmap funcionario {
             get {
                 object obj = ResourceManager.GetObject("funcionario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pet {
+            get {
+                object obj = ResourceManager.GetObject("pet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

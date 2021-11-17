@@ -34,11 +34,13 @@ namespace pet
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(49, 112);
+            this.txtSenha.Location = new System.Drawing.Point(219, 107);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(182, 20);
@@ -47,7 +49,7 @@ namespace pet
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Location = new System.Drawing.Point(49, 96);
+            this.lblSenha.Location = new System.Drawing.Point(219, 91);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(38, 13);
             this.lblSenha.TabIndex = 7;
@@ -56,16 +58,17 @@ namespace pet
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(101, 159);
+            this.btnLogin.Location = new System.Drawing.Point(271, 154);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 8;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(49, 60);
+            this.txtLogin.Location = new System.Drawing.Point(219, 55);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(182, 20);
             this.txtLogin.TabIndex = 5;
@@ -73,17 +76,28 @@ namespace pet
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Location = new System.Drawing.Point(49, 44);
+            this.lblLogin.Location = new System.Drawing.Point(219, 39);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(33, 13);
             this.lblLogin.TabIndex = 4;
             this.lblLogin.Text = "Login";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::pet.Properties.Resources.pet;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(186, 179);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 227);
+            this.ClientSize = new System.Drawing.Size(429, 247);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.btnLogin);
@@ -92,6 +106,7 @@ namespace pet
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,5 +119,6 @@ namespace pet
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

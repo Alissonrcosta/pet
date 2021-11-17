@@ -31,8 +31,11 @@ namespace pet
         {
             this.label1 = new System.Windows.Forms.Label();
             this.lblFuncionário = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbCliente = new System.Windows.Forms.PictureBox();
             this.pbFuncionario = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFuncionario)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +59,27 @@ namespace pet
             this.lblFuncionário.Size = new System.Drawing.Size(122, 18);
             this.lblFuncionário.TabIndex = 5;
             this.lblFuncionário.Text = "FUNCIONÁRIO";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(408, 157);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 18);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "ANIMAIS";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::pet.Properties.Resources.animais;
+            this.pictureBox1.Location = new System.Drawing.Point(385, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 123);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pbCliente
             // 
@@ -86,6 +110,8 @@ namespace pet
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbCliente);
             this.Controls.Add(this.lblFuncionário);
@@ -94,6 +120,7 @@ namespace pet
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMenu";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFuncionario)).EndInit();
             this.ResumeLayout(false);
@@ -107,5 +134,7 @@ namespace pet
         private System.Windows.Forms.PictureBox pbCliente;
         private System.Windows.Forms.Label lblFuncionário;
         private System.Windows.Forms.PictureBox pbFuncionario;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
