@@ -33,11 +33,10 @@ namespace pet
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.animaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +45,7 @@ namespace pet
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
             this.vendasToolStripMenuItem,
+            this.agendaToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -58,7 +58,6 @@ namespace pet
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.funcionáriosToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.produtosToolStripMenuItem,
             this.animaisToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
@@ -78,25 +77,19 @@ namespace pet
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
-            // produtosToolStripMenuItem
+            // animaisToolStripMenuItem
             // 
-            this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.produtosToolStripMenuItem.Text = "Produtos";
+            this.animaisToolStripMenuItem.Name = "animaisToolStripMenuItem";
+            this.animaisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.animaisToolStripMenuItem.Text = "Animais";
+            this.animaisToolStripMenuItem.Click += new System.EventHandler(this.animaisToolStripMenuItem_Click);
             // 
             // vendasToolStripMenuItem
             // 
-            this.vendasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.vendaToolStripMenuItem});
             this.vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
-            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.vendasToolStripMenuItem.Text = "Vendas";
-            // 
-            // vendaToolStripMenuItem
-            // 
-            this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
-            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
-            this.vendaToolStripMenuItem.Text = "Venda";
+            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.vendasToolStripMenuItem.Text = "Serviços";
+            this.vendasToolStripMenuItem.Click += new System.EventHandler(this.vendasToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -105,12 +98,11 @@ namespace pet
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
-            // animaisToolStripMenuItem
+            // agendaToolStripMenuItem
             // 
-            this.animaisToolStripMenuItem.Name = "animaisToolStripMenuItem";
-            this.animaisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.animaisToolStripMenuItem.Text = "Animais";
-            this.animaisToolStripMenuItem.Click += new System.EventHandler(this.animaisToolStripMenuItem_Click);
+            this.agendaToolStripMenuItem.Name = "agendaToolStripMenuItem";
+            this.agendaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.agendaToolStripMenuItem.Text = "Agenda";
             // 
             // FormPrincipal
             // 
@@ -139,10 +131,9 @@ namespace pet
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem funcionáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vendasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vendaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem animaisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agendaToolStripMenuItem;
     }
 }

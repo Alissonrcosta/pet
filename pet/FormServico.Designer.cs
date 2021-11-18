@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnFinalizarVenda = new System.Windows.Forms.Button();
-            this.btnFinalizarPedido = new System.Windows.Forms.Button();
+            this.btnFinalizarServico = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnExcluirServico = new System.Windows.Forms.Button();
             this.btnServico = new System.Windows.Forms.Button();
@@ -50,38 +49,32 @@
             this.lblDataAdmissao = new System.Windows.Forms.Label();
             this.lblSituacao = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.rb2 = new System.Windows.Forms.RadioButton();
+            this.rb3 = new System.Windows.Forms.RadioButton();
+            this.rb4 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnFinalizarVenda
+            // btnFinalizarServico
             // 
-            this.btnFinalizarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizarVenda.Location = new System.Drawing.Point(528, 398);
-            this.btnFinalizarVenda.Name = "btnFinalizarVenda";
-            this.btnFinalizarVenda.Size = new System.Drawing.Size(123, 23);
-            this.btnFinalizarVenda.TabIndex = 49;
-            this.btnFinalizarVenda.Text = "Finalizar Venda";
-            this.btnFinalizarVenda.UseVisualStyleBackColor = true;
-            // 
-            // btnFinalizarPedido
-            // 
-            this.btnFinalizarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizarPedido.Location = new System.Drawing.Point(404, 398);
-            this.btnFinalizarPedido.Name = "btnFinalizarPedido";
-            this.btnFinalizarPedido.Size = new System.Drawing.Size(118, 23);
-            this.btnFinalizarPedido.TabIndex = 48;
-            this.btnFinalizarPedido.Text = "Finalizar Pedido";
-            this.btnFinalizarPedido.UseVisualStyleBackColor = true;
+            this.btnFinalizarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizarServico.Location = new System.Drawing.Point(528, 398);
+            this.btnFinalizarServico.Name = "btnFinalizarServico";
+            this.btnFinalizarServico.Size = new System.Drawing.Size(123, 23);
+            this.btnFinalizarServico.TabIndex = 49;
+            this.btnFinalizarServico.Text = "Finalizar Serviço";
+            this.btnFinalizarServico.UseVisualStyleBackColor = true;
             // 
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(323, 398);
+            this.btnSair.Location = new System.Drawing.Point(447, 398);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 47;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnExcluirServico
             // 
@@ -164,7 +157,7 @@
             // 
             // txtIdServico
             // 
-            this.txtIdServico.Location = new System.Drawing.Point(72, 21);
+            this.txtIdServico.Location = new System.Drawing.Point(72, 12);
             this.txtIdServico.Name = "txtIdServico";
             this.txtIdServico.Size = new System.Drawing.Size(140, 20);
             this.txtIdServico.TabIndex = 29;
@@ -173,7 +166,7 @@
             // 
             this.lblIdVenda.AutoSize = true;
             this.lblIdVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdVenda.Location = new System.Drawing.Point(38, 26);
+            this.lblIdVenda.Location = new System.Drawing.Point(38, 17);
             this.lblIdVenda.Name = "lblIdVenda";
             this.lblIdVenda.Size = new System.Drawing.Size(20, 13);
             this.lblIdVenda.TabIndex = 28;
@@ -182,7 +175,7 @@
             // btnLocalizar
             // 
             this.btnLocalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLocalizar.Location = new System.Drawing.Point(226, 19);
+            this.btnLocalizar.Location = new System.Drawing.Point(226, 10);
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(124, 23);
             this.btnLocalizar.TabIndex = 26;
@@ -257,18 +250,54 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Banho ",
-            "Tosa"});
+            "Serviço Pago",
+            "Serviço a Pagar "});
             this.comboBox1.Location = new System.Drawing.Point(226, 177);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(118, 21);
             this.comboBox1.TabIndex = 80;
             // 
+            // rb2
+            // 
+            this.rb2.AutoSize = true;
+            this.rb2.Location = new System.Drawing.Point(297, 107);
+            this.rb2.Name = "rb2";
+            this.rb2.Size = new System.Drawing.Size(149, 17);
+            this.rb2.TabIndex = 81;
+            this.rb2.TabStop = true;
+            this.rb2.Text = "Combo 2 Serviços no Mês";
+            this.rb2.UseVisualStyleBackColor = true;
+            // 
+            // rb3
+            // 
+            this.rb3.AutoSize = true;
+            this.rb3.Location = new System.Drawing.Point(297, 130);
+            this.rb3.Name = "rb3";
+            this.rb3.Size = new System.Drawing.Size(149, 17);
+            this.rb3.TabIndex = 82;
+            this.rb3.TabStop = true;
+            this.rb3.Text = "Combo 3 Serviços no Mês";
+            this.rb3.UseVisualStyleBackColor = true;
+            // 
+            // rb4
+            // 
+            this.rb4.AutoSize = true;
+            this.rb4.Location = new System.Drawing.Point(297, 153);
+            this.rb4.Name = "rb4";
+            this.rb4.Size = new System.Drawing.Size(149, 17);
+            this.rb4.TabIndex = 83;
+            this.rb4.TabStop = true;
+            this.rb4.Text = "Combo 4 Serviços no Mês";
+            this.rb4.UseVisualStyleBackColor = true;
+            // 
             // FormServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 443);
+            this.ClientSize = new System.Drawing.Size(663, 433);
+            this.Controls.Add(this.rb4);
+            this.Controls.Add(this.rb3);
+            this.Controls.Add(this.rb2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblSituacao);
             this.Controls.Add(this.dtServico);
@@ -277,8 +306,7 @@
             this.Controls.Add(this.cbxAnimal);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.cbxCliente);
-            this.Controls.Add(this.btnFinalizarVenda);
-            this.Controls.Add(this.btnFinalizarPedido);
+            this.Controls.Add(this.btnFinalizarServico);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnExcluirServico);
             this.Controls.Add(this.btnServico);
@@ -302,8 +330,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnFinalizarVenda;
-        private System.Windows.Forms.Button btnFinalizarPedido;
+        private System.Windows.Forms.Button btnFinalizarServico;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnExcluirServico;
         private System.Windows.Forms.Button btnServico;
@@ -324,5 +351,8 @@
         private System.Windows.Forms.Label lblDataAdmissao;
         private System.Windows.Forms.Label lblSituacao;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RadioButton rb2;
+        private System.Windows.Forms.RadioButton rb3;
+        private System.Windows.Forms.RadioButton rb4;
     }
 }

@@ -37,5 +37,12 @@ namespace pet
             ani.MdiParent = this.MdiParent;
             ani.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            var ser = new FormServico();
+            ser.MdiParent = this.MdiParent;
+            ser.Show();
+        }
     }
 }

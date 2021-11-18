@@ -63,5 +63,17 @@ namespace pet
             ani.MdiParent = this;
             ani.Show();
         }
+
+        private void vendasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var ser = new FormServico();
+            ser.MdiParent = this;
+            ser.Show();
+        }
+
+        //private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+
+        //}
     }
 }
