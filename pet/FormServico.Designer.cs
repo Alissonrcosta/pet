@@ -31,13 +31,13 @@
             this.btnFinalizarServico = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnExcluirServico = new System.Windows.Forms.Button();
-            this.btnServico = new System.Windows.Forms.Button();
+            this.btnEditarServico = new System.Windows.Forms.Button();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.lblQuantidade = new System.Windows.Forms.Label();
             this.btnNovoServico = new System.Windows.Forms.Button();
             this.cbxServico = new System.Windows.Forms.ComboBox();
             this.lblProduto = new System.Windows.Forms.Label();
-            this.dgvVenda = new System.Windows.Forms.DataGridView();
+            this.dgvServico = new System.Windows.Forms.DataGridView();
             this.txtIdServico = new System.Windows.Forms.TextBox();
             this.lblIdVenda = new System.Windows.Forms.Label();
             this.btnLocalizar = new System.Windows.Forms.Button();
@@ -45,20 +45,15 @@
             this.cbxCliente = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxAnimal = new System.Windows.Forms.ComboBox();
-            this.dtServico = new System.Windows.Forms.DateTimePicker();
-            this.lblDataAdmissao = new System.Windows.Forms.Label();
             this.lblSituacao = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.rb2 = new System.Windows.Forms.RadioButton();
-            this.rb3 = new System.Windows.Forms.RadioButton();
-            this.rb4 = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).BeginInit();
+            this.cbxSituacao = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServico)).BeginInit();
             this.SuspendLayout();
             // 
             // btnFinalizarServico
             // 
             this.btnFinalizarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizarServico.Location = new System.Drawing.Point(528, 398);
+            this.btnFinalizarServico.Location = new System.Drawing.Point(436, 401);
             this.btnFinalizarServico.Name = "btnFinalizarServico";
             this.btnFinalizarServico.Size = new System.Drawing.Size(123, 23);
             this.btnFinalizarServico.TabIndex = 49;
@@ -68,7 +63,7 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(447, 398);
+            this.btnSair.Location = new System.Drawing.Point(355, 401);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 47;
@@ -79,22 +74,24 @@
             // btnExcluirServico
             // 
             this.btnExcluirServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluirServico.Location = new System.Drawing.Point(475, 171);
+            this.btnExcluirServico.Location = new System.Drawing.Point(239, 163);
             this.btnExcluirServico.Name = "btnExcluirServico";
             this.btnExcluirServico.Size = new System.Drawing.Size(111, 23);
             this.btnExcluirServico.TabIndex = 44;
             this.btnExcluirServico.Text = "Excluir Serviço";
             this.btnExcluirServico.UseVisualStyleBackColor = true;
+            this.btnExcluirServico.Click += new System.EventHandler(this.btnExcluirServico_Click);
             // 
-            // btnServico
+            // btnEditarServico
             // 
-            this.btnServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServico.Location = new System.Drawing.Point(475, 142);
-            this.btnServico.Name = "btnServico";
-            this.btnServico.Size = new System.Drawing.Size(111, 23);
-            this.btnServico.TabIndex = 43;
-            this.btnServico.Text = "Editar Serviço";
-            this.btnServico.UseVisualStyleBackColor = true;
+            this.btnEditarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarServico.Location = new System.Drawing.Point(239, 134);
+            this.btnEditarServico.Name = "btnEditarServico";
+            this.btnEditarServico.Size = new System.Drawing.Size(111, 23);
+            this.btnEditarServico.TabIndex = 43;
+            this.btnEditarServico.Text = "Editar Serviço";
+            this.btnEditarServico.UseVisualStyleBackColor = true;
+            this.btnEditarServico.Click += new System.EventHandler(this.btnEditarServico_Click);
             // 
             // txtValor
             // 
@@ -116,12 +113,13 @@
             // btnNovoServico
             // 
             this.btnNovoServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovoServico.Location = new System.Drawing.Point(475, 112);
+            this.btnNovoServico.Location = new System.Drawing.Point(239, 104);
             this.btnNovoServico.Name = "btnNovoServico";
             this.btnNovoServico.Size = new System.Drawing.Size(111, 23);
             this.btnNovoServico.TabIndex = 34;
             this.btnNovoServico.Text = "Novo Serviço";
             this.btnNovoServico.UseVisualStyleBackColor = true;
+            this.btnNovoServico.Click += new System.EventHandler(this.btnNovoServico_Click);
             // 
             // cbxServico
             // 
@@ -144,16 +142,16 @@
             this.lblProduto.TabIndex = 32;
             this.lblProduto.Text = "Serviço";
             // 
-            // dgvVenda
+            // dgvServico
             // 
-            this.dgvVenda.AllowUserToAddRows = false;
-            this.dgvVenda.AllowUserToDeleteRows = false;
-            this.dgvVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVenda.Location = new System.Drawing.Point(12, 204);
-            this.dgvVenda.Name = "dgvVenda";
-            this.dgvVenda.ReadOnly = true;
-            this.dgvVenda.Size = new System.Drawing.Size(639, 188);
-            this.dgvVenda.TabIndex = 30;
+            this.dgvServico.AllowUserToAddRows = false;
+            this.dgvServico.AllowUserToDeleteRows = false;
+            this.dgvServico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvServico.Location = new System.Drawing.Point(12, 204);
+            this.dgvServico.Name = "dgvServico";
+            this.dgvServico.ReadOnly = true;
+            this.dgvServico.Size = new System.Drawing.Size(547, 188);
+            this.dgvServico.TabIndex = 30;
             // 
             // txtIdServico
             // 
@@ -181,6 +179,7 @@
             this.btnLocalizar.TabIndex = 26;
             this.btnLocalizar.Text = "Localizar Serviço";
             this.btnLocalizar.UseVisualStyleBackColor = true;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // lblCliente
             // 
@@ -218,90 +217,34 @@
             this.cbxAnimal.Size = new System.Drawing.Size(401, 21);
             this.cbxAnimal.TabIndex = 52;
             // 
-            // dtServico
-            // 
-            this.dtServico.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtServico.Location = new System.Drawing.Point(19, 178);
-            this.dtServico.Name = "dtServico";
-            this.dtServico.Size = new System.Drawing.Size(126, 20);
-            this.dtServico.TabIndex = 78;
-            // 
-            // lblDataAdmissao
-            // 
-            this.lblDataAdmissao.AutoSize = true;
-            this.lblDataAdmissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataAdmissao.Location = new System.Drawing.Point(19, 162);
-            this.lblDataAdmissao.Name = "lblDataAdmissao";
-            this.lblDataAdmissao.Size = new System.Drawing.Size(99, 13);
-            this.lblDataAdmissao.TabIndex = 77;
-            this.lblDataAdmissao.Text = "Data do Serviço";
-            // 
             // lblSituacao
             // 
             this.lblSituacao.AutoSize = true;
             this.lblSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSituacao.Location = new System.Drawing.Point(170, 181);
+            this.lblSituacao.Location = new System.Drawing.Point(16, 163);
             this.lblSituacao.Name = "lblSituacao";
             this.lblSituacao.Size = new System.Drawing.Size(57, 13);
             this.lblSituacao.TabIndex = 79;
             this.lblSituacao.Text = "Situação";
             // 
-            // comboBox1
+            // cbxSituacao
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxSituacao.FormattingEnabled = true;
+            this.cbxSituacao.Items.AddRange(new object[] {
             "Serviço Pago",
             "Serviço a Pagar "});
-            this.comboBox1.Location = new System.Drawing.Point(226, 177);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(118, 21);
-            this.comboBox1.TabIndex = 80;
-            // 
-            // rb2
-            // 
-            this.rb2.AutoSize = true;
-            this.rb2.Location = new System.Drawing.Point(297, 107);
-            this.rb2.Name = "rb2";
-            this.rb2.Size = new System.Drawing.Size(149, 17);
-            this.rb2.TabIndex = 81;
-            this.rb2.TabStop = true;
-            this.rb2.Text = "Combo 2 Serviços no Mês";
-            this.rb2.UseVisualStyleBackColor = true;
-            // 
-            // rb3
-            // 
-            this.rb3.AutoSize = true;
-            this.rb3.Location = new System.Drawing.Point(297, 130);
-            this.rb3.Name = "rb3";
-            this.rb3.Size = new System.Drawing.Size(149, 17);
-            this.rb3.TabIndex = 82;
-            this.rb3.TabStop = true;
-            this.rb3.Text = "Combo 3 Serviços no Mês";
-            this.rb3.UseVisualStyleBackColor = true;
-            // 
-            // rb4
-            // 
-            this.rb4.AutoSize = true;
-            this.rb4.Location = new System.Drawing.Point(297, 153);
-            this.rb4.Name = "rb4";
-            this.rb4.Size = new System.Drawing.Size(149, 17);
-            this.rb4.TabIndex = 83;
-            this.rb4.TabStop = true;
-            this.rb4.Text = "Combo 4 Serviços no Mês";
-            this.rb4.UseVisualStyleBackColor = true;
+            this.cbxSituacao.Location = new System.Drawing.Point(72, 159);
+            this.cbxSituacao.Name = "cbxSituacao";
+            this.cbxSituacao.Size = new System.Drawing.Size(118, 21);
+            this.cbxSituacao.TabIndex = 80;
             // 
             // FormServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 433);
-            this.Controls.Add(this.rb4);
-            this.Controls.Add(this.rb3);
-            this.Controls.Add(this.rb2);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(573, 436);
+            this.Controls.Add(this.cbxSituacao);
             this.Controls.Add(this.lblSituacao);
-            this.Controls.Add(this.dtServico);
-            this.Controls.Add(this.lblDataAdmissao);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxAnimal);
             this.Controls.Add(this.lblCliente);
@@ -309,13 +252,13 @@
             this.Controls.Add(this.btnFinalizarServico);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnExcluirServico);
-            this.Controls.Add(this.btnServico);
+            this.Controls.Add(this.btnEditarServico);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.lblQuantidade);
             this.Controls.Add(this.btnNovoServico);
             this.Controls.Add(this.cbxServico);
             this.Controls.Add(this.lblProduto);
-            this.Controls.Add(this.dgvVenda);
+            this.Controls.Add(this.dgvServico);
             this.Controls.Add(this.txtIdServico);
             this.Controls.Add(this.lblIdVenda);
             this.Controls.Add(this.btnLocalizar);
@@ -323,7 +266,8 @@
             this.MinimizeBox = false;
             this.Name = "FormServico";
             this.Text = "Serviço";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).EndInit();
+            this.Load += new System.EventHandler(this.FormServico_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,13 +277,13 @@
         private System.Windows.Forms.Button btnFinalizarServico;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnExcluirServico;
-        private System.Windows.Forms.Button btnServico;
+        private System.Windows.Forms.Button btnEditarServico;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label lblQuantidade;
         private System.Windows.Forms.Button btnNovoServico;
         private System.Windows.Forms.ComboBox cbxServico;
         private System.Windows.Forms.Label lblProduto;
-        private System.Windows.Forms.DataGridView dgvVenda;
+        private System.Windows.Forms.DataGridView dgvServico;
         private System.Windows.Forms.TextBox txtIdServico;
         private System.Windows.Forms.Label lblIdVenda;
         private System.Windows.Forms.Button btnLocalizar;
@@ -347,12 +291,7 @@
         private System.Windows.Forms.ComboBox cbxCliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxAnimal;
-        private System.Windows.Forms.DateTimePicker dtServico;
-        private System.Windows.Forms.Label lblDataAdmissao;
         private System.Windows.Forms.Label lblSituacao;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton rb2;
-        private System.Windows.Forms.RadioButton rb3;
-        private System.Windows.Forms.RadioButton rb4;
+        private System.Windows.Forms.ComboBox cbxSituacao;
     }
 }

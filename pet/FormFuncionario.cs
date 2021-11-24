@@ -131,6 +131,7 @@ namespace pet
                     txtLogin.Text = dr["login"].ToString();
                     txtSenha.Text = dr["senha"].ToString();
                     cbxGenero.Text = dr["genero"].ToString();
+                    dtDataAdmissao.Text = dr["data_admissao"].ToString();
                     
 
                     dr.Close();

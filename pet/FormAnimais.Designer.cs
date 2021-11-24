@@ -30,7 +30,7 @@ namespace pet
         private void InitializeComponent()
         {
             this.lblPeso = new System.Windows.Forms.Label();
-            this.dtDataAdmissao = new System.Windows.Forms.DateTimePicker();
+            this.dtDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.txtPelagem = new System.Windows.Forms.TextBox();
             this.lblPelagem = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
@@ -44,18 +44,18 @@ namespace pet
             this.lblRaca = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.dgvFuncionario = new System.Windows.Forms.DataGridView();
+            this.dgvAnimal = new System.Windows.Forms.DataGridView();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
             this.btnLocalizar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtidCliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPeso = new System.Windows.Forms.TextBox();
-            this.txtPorte = new System.Windows.Forms.TextBox();
             this.lblPorte = new System.Windows.Forms.Label();
-            this.txtSexo = new System.Windows.Forms.TextBox();
             this.lblSexo = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).BeginInit();
+            this.cbxPorte = new System.Windows.Forms.ComboBox();
+            this.cbxSexo = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimal)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPeso
@@ -68,19 +68,18 @@ namespace pet
             this.lblPeso.TabIndex = 98;
             this.lblPeso.Text = "Peso";
             // 
-            // dtDataAdmissao
+            // dtDataNascimento
             // 
-            this.dtDataAdmissao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDataAdmissao.Location = new System.Drawing.Point(177, 180);
-            this.dtDataAdmissao.Name = "dtDataAdmissao";
-            this.dtDataAdmissao.Size = new System.Drawing.Size(126, 20);
-            this.dtDataAdmissao.TabIndex = 96;
+            this.dtDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDataNascimento.Location = new System.Drawing.Point(177, 180);
+            this.dtDataNascimento.Name = "dtDataNascimento";
+            this.dtDataNascimento.Size = new System.Drawing.Size(126, 20);
+            this.dtDataNascimento.TabIndex = 96;
             // 
             // txtPelagem
             // 
             this.txtPelagem.Location = new System.Drawing.Point(177, 127);
             this.txtPelagem.Name = "txtPelagem";
-            this.txtPelagem.PasswordChar = '*';
             this.txtPelagem.Size = new System.Drawing.Size(126, 20);
             this.txtPelagem.TabIndex = 95;
             // 
@@ -114,6 +113,7 @@ namespace pet
             this.btnApagar.TabIndex = 92;
             this.btnApagar.Text = "Apagar";
             this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // btnAtualizar
             // 
@@ -124,6 +124,7 @@ namespace pet
             this.btnAtualizar.TabIndex = 91;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnInserir
             // 
@@ -134,6 +135,7 @@ namespace pet
             this.btnInserir.TabIndex = 90;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // txtEspecie
             // 
@@ -196,13 +198,13 @@ namespace pet
             this.lblNome.TabIndex = 83;
             this.lblNome.Text = "Nome";
             // 
-            // dgvFuncionario
+            // dgvAnimal
             // 
-            this.dgvFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFuncionario.Location = new System.Drawing.Point(11, 269);
-            this.dgvFuncionario.Name = "dgvFuncionario";
-            this.dgvFuncionario.Size = new System.Drawing.Size(614, 165);
-            this.dgvFuncionario.TabIndex = 82;
+            this.dgvAnimal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAnimal.Location = new System.Drawing.Point(11, 269);
+            this.dgvAnimal.Name = "dgvAnimal";
+            this.dgvAnimal.Size = new System.Drawing.Size(614, 165);
+            this.dgvAnimal.TabIndex = 82;
             // 
             // txtId
             // 
@@ -230,13 +232,14 @@ namespace pet
             this.btnLocalizar.TabIndex = 79;
             this.btnLocalizar.Text = "Localizar";
             this.btnLocalizar.UseVisualStyleBackColor = true;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
-            // textBox1
+            // txtidCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(332, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(126, 20);
-            this.textBox1.TabIndex = 100;
+            this.txtidCliente.Location = new System.Drawing.Point(332, 29);
+            this.txtidCliente.Name = "txtidCliente";
+            this.txtidCliente.Size = new System.Drawing.Size(126, 20);
+            this.txtidCliente.TabIndex = 100;
             // 
             // label1
             // 
@@ -255,14 +258,6 @@ namespace pet
             this.txtPeso.Size = new System.Drawing.Size(146, 20);
             this.txtPeso.TabIndex = 101;
             // 
-            // txtPorte
-            // 
-            this.txtPorte.Location = new System.Drawing.Point(329, 127);
-            this.txtPorte.Name = "txtPorte";
-            this.txtPorte.PasswordChar = '*';
-            this.txtPorte.Size = new System.Drawing.Size(132, 20);
-            this.txtPorte.TabIndex = 103;
-            // 
             // lblPorte
             // 
             this.lblPorte.AutoSize = true;
@@ -272,14 +267,6 @@ namespace pet
             this.lblPorte.Size = new System.Drawing.Size(37, 13);
             this.lblPorte.TabIndex = 102;
             this.lblPorte.Text = "Porte";
-            // 
-            // txtSexo
-            // 
-            this.txtSexo.Location = new System.Drawing.Point(329, 183);
-            this.txtSexo.Name = "txtSexo";
-            this.txtSexo.PasswordChar = '*';
-            this.txtSexo.Size = new System.Drawing.Size(132, 20);
-            this.txtSexo.TabIndex = 105;
             // 
             // lblSexo
             // 
@@ -291,20 +278,43 @@ namespace pet
             this.lblSexo.TabIndex = 104;
             this.lblSexo.Text = "Sexo";
             // 
+            // cbxPorte
+            // 
+            this.cbxPorte.FormattingEnabled = true;
+            this.cbxPorte.Items.AddRange(new object[] {
+            "Pequeno",
+            "Médio ",
+            "Grande"});
+            this.cbxPorte.Location = new System.Drawing.Point(329, 127);
+            this.cbxPorte.Name = "cbxPorte";
+            this.cbxPorte.Size = new System.Drawing.Size(129, 21);
+            this.cbxPorte.TabIndex = 105;
+            // 
+            // cbxSexo
+            // 
+            this.cbxSexo.FormattingEnabled = true;
+            this.cbxSexo.Items.AddRange(new object[] {
+            "Macho",
+            "Fêmea"});
+            this.cbxSexo.Location = new System.Drawing.Point(329, 183);
+            this.cbxSexo.Name = "cbxSexo";
+            this.cbxSexo.Size = new System.Drawing.Size(129, 21);
+            this.cbxSexo.TabIndex = 106;
+            // 
             // FormAnimais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 460);
-            this.Controls.Add(this.txtSexo);
+            this.Controls.Add(this.cbxSexo);
+            this.Controls.Add(this.cbxPorte);
             this.Controls.Add(this.lblSexo);
-            this.Controls.Add(this.txtPorte);
             this.Controls.Add(this.lblPorte);
             this.Controls.Add(this.txtPeso);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtidCliente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPeso);
-            this.Controls.Add(this.dtDataAdmissao);
+            this.Controls.Add(this.dtDataNascimento);
             this.Controls.Add(this.txtPelagem);
             this.Controls.Add(this.lblPelagem);
             this.Controls.Add(this.btnSair);
@@ -318,13 +328,14 @@ namespace pet
             this.Controls.Add(this.lblRaca);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.dgvFuncionario);
+            this.Controls.Add(this.dgvAnimal);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnLocalizar);
             this.Name = "FormAnimais";
             this.Text = "FormAnimais";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).EndInit();
+            this.Load += new System.EventHandler(this.FormAnimais_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,7 +343,7 @@ namespace pet
 
         #endregion
         private System.Windows.Forms.Label lblPeso;
-        private System.Windows.Forms.DateTimePicker dtDataAdmissao;
+        private System.Windows.Forms.DateTimePicker dtDataNascimento;
         private System.Windows.Forms.TextBox txtPelagem;
         private System.Windows.Forms.Label lblPelagem;
         private System.Windows.Forms.Button btnSair;
@@ -346,16 +357,16 @@ namespace pet
         private System.Windows.Forms.Label lblRaca;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.DataGridView dgvFuncionario;
+        private System.Windows.Forms.DataGridView dgvAnimal;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Button btnLocalizar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtidCliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPeso;
-        private System.Windows.Forms.TextBox txtPorte;
         private System.Windows.Forms.Label lblPorte;
-        private System.Windows.Forms.TextBox txtSexo;
         private System.Windows.Forms.Label lblSexo;
+        private System.Windows.Forms.ComboBox cbxPorte;
+        private System.Windows.Forms.ComboBox cbxSexo;
     }
 }
